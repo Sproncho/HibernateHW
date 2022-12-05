@@ -29,7 +29,7 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
 	@Override
 	public void delete(Author author) {
-		 Author authorImpl = em.find(Author.class, author);
+		 Author authorImpl = em.find(Author.class, author.getName());
 		 em.remove(authorImpl);
 	}
 
